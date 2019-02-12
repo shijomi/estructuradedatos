@@ -1,0 +1,24 @@
+// iva.cpp : Defines the entry point for the console application.
+//
+//librerias //
+#include "stdafx.h"
+#include "stdlib.h"
+#include"conio.h"
+#include "stdio.h"
+#include <iostream>
+using namespace std;
+// prototipos o funciones //
+
+
+
+void main ()
+{//tipos de datos//
+ float entrada, salida, n;
+ cout<< "Ingrese el precio inicial "<< endl;
+ cin>> entrada;
+ n= entrada*0.13;
+ salida= entrada+n;//acumulador//
+ cout<< " el precio final es : "<< salida << endl;
+ getch();
+ 
+}
