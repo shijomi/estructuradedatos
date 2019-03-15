@@ -1,0 +1,54 @@
+Area. h
+#pragma once
+class Area
+{
+private:
+	float r;
+	float h;
+public:
+	Area(float radio, float altura);
+	~Area(void);
+	float area_total();
+};
+
+Area. cpp
+#include "StdAfx.h"
+#include "Area.h"
+
+
+Area::Area(float radio, float altura)
+{
+	r=radio;
+	h=altura;
+}
+
+
+Area::~Area(void)
+{
+}
+float Area:: area_total()
+{
+	float areabase, arealado,at;
+	areabase= (3.1416)*(r*r);
+	arealado= (2*3.1416*r*h);
+	at= 2*areabase+arealado;
+	return at;
+}
+ejemplo.cpp
+#include "stdafx.h"
+#include "Area.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+
+void main ()
+{ float R, H;
+	cout<< "Ingrese radio";
+	cin>> R;
+	cout<< "Ingrese altura ";
+	cin>> H;
+	Area a1 (R, H);
+	cout<< "El area total es " << a1.area_total();
+	getch();
+}
+
